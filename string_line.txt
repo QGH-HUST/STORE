@@ -1,0 +1,20 @@
+#include<iostream>
+#include<string.h>
+#include<stdio.h>
+using namespace std;
+
+int main()
+{
+    char str[5000];
+    int last_len = 0;
+    int str_len = 0;
+    cin.get(str,5000);
+    str_len = strlen(str);
+    last_len = str_len;
+    for(int i = 0;i < str_len; i++)
+    {
+        if(str[i] == ' ') last_len = str_len - i -1;
+    }
+    cout << last_len << endl;
+    return 0;
+}
